@@ -14,7 +14,9 @@ class CreateJumlahPengunjungTable extends Migration
     public function up()
     {
         Schema::create('jumlah_pengunjung', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('jumlah_pengunjung');
+            $table->integer('total_pengunjung');
         });
     }
 

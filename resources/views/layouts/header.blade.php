@@ -29,6 +29,10 @@
                             {{ csrf_field() }}
                                <button type="submit">Logout</button>
                             </form>
+                            <a href="{{ url('/profile') }}">Profile</a>
+                            <a href="{{ url('/customer') }}">Customer</a>
+                            <a href="{{ url('/media') }}">Media</a>
+                            <a href="{{ url('/messages') }}">Messages</a>
                         @else
                             <li><a href="{{ url('/login') }}">Login</a></li>
                         @endif

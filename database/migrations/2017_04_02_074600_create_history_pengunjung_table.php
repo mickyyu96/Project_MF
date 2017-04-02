@@ -14,6 +14,7 @@ class CreateHistoryPengunjungTable extends Migration
     public function up()
     {
         Schema::create('history_pengunjung', function (Blueprint $table) {
+            $table->increments('id');
             $table->date('tanggal');
             $table->integer('total_pengunjung');
         });

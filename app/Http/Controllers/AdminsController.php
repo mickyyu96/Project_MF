@@ -9,7 +9,7 @@ class AdminsController extends Controller
 {
     public function showLoginForm() {
     	if (session('state') == 'login') {
-            return redirect('/profile');
+            return view('/profile');
     	}
     	else {
     		return view('admins.login');
@@ -27,9 +27,10 @@ class AdminsController extends Controller
 
     	if ($user_exist) {
     		session(['state' => 'login']);
-    		return view('profiles.index');
+    		return redirect('/profile');
     	}
     	else {
+            session(['state' => 'logout']);
     		$error = '* login failed';
     		return view('admins.login', compact('error'));
     	}

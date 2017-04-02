@@ -11,12 +11,8 @@
 |
 */
 
-// Welcome
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Main
+Route::get('/', ['uses' => 'MainsController@index']);
 
 // Login/Logout
 Route::get('/login', ['uses' => 'AdminsController@showLoginForm']);
@@ -25,4 +21,11 @@ Route::post('/logout', ['uses' => 'AdminsController@logout']);
 
 // Profile
 Route::get('/profile', ['uses' => 'ProfilesController@index']);
+Route::get('/edit_profile', ['uses' => 'ProfilesController@showEditForm']);
+Route::post('/edit_profile', ['uses' => 'ProfilesController@edit']);
 
+// Customer
+Route::get('/customer', ['uses' => 'CustomersController@index']);
+Route::post('/add', ['uses' => 'CustomersController@add']);
+Route::post('/minus', ['uses' => 'CustomersController@minus']);
+Route::post('/save', ['uses' => 'CustomersController@save']);
