@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 class AdminsController extends Controller
 {
     public function showLoginForm() {
-    	if (session('state') == 'logout') {
-    		return view('admins.login');
+    	if (session('state') == 'login') {
+            return redirect('/profile');
     	}
     	else {
-    		return redirect('/profile');
+    		return view('admins.login');
     	}
     }
 
@@ -20,7 +20,7 @@ class AdminsController extends Controller
     	$username = $request->username;
     	$password = $request->password;
 
-    	$user_exist = DB::table('users')
+    	$user_exist = DB::table('admin')
     					->where('username', $username)
     					->where('password', $password)
     					->first();
