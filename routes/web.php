@@ -11,6 +11,18 @@
 |
 */
 
+// Welcome
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Main
+
+// Login/Logout
+Route::get('/login', ['uses' => 'AdminsController@showLoginForm']);
+Route::post('/login', ['uses' => 'AdminsController@login']);
+Route::post('/logout', ['uses' => 'AdminsController@logout']);
+
+// Profile
+Route::get('/profile', ['uses' => 'ProfilesController@index']);
+
