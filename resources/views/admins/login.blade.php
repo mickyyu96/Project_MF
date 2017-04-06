@@ -1,10 +1,17 @@
-@extends('layouts.header')
+
 
 @section('title')
     Login
 @endsection
+ <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-@section('content')
+<!-- Scripts -->
+<script>
+    window.Laravel = {!! json_encode([
+        'csrfToken' => csrf_token(),
+    ]) !!};
+</script>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -43,4 +50,3 @@
         </div>
     </div>
 </div>
-@endsection

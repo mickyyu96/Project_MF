@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>@yield('title')</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
-</head>
+@section('header')
 <body>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
@@ -40,8 +34,9 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
+   
     </div>
     <script src="/js/app.js"></script>
 </body>
 </html>
+@endsection

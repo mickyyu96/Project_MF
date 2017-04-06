@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.base')
 
 @section('title')
     Home
