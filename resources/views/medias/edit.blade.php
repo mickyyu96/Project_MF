@@ -1,8 +1,8 @@
-@extends('layouts.header')
-
 @section('title')
     Edit Publikasi
 @endsection
+
+@extends('layouts.base')
 
 @section('content')
 <div class="container">
@@ -32,7 +32,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btn-xl" style="background:#808080;">
                                     Edit
                                 </button>
                             </div>
@@ -43,4 +43,5 @@
         </div>
     </div>
 </div>
-@endsection
+
+ @endsection

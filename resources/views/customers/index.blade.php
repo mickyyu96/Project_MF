@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.base')
 
 @section('title')
     Informasi Customer
@@ -12,21 +12,29 @@
 				<h1>Informasi Customer</h1>
 			</div>
 		</div>
-		<div class="col-md-12">
-			<p>Jumlah Pengunjung Saat Ini: {{ $jumlah_pengunjung->jumlah_pengunjung }}</p>
-			<p>Total Pengunjung: {{ $jumlah_pengunjung->total_pengunjung }}</p>
-			<form method="POST" action="{{ url('/add') }}">
+		<div class="col-md-12" >
+
+			<h2> Jumlah Pengunjung </h2>
+			<h1 style="text-align: center;">
+			<form method="POST" action="{{ url('/add') }}" style="display: inline-block;">
 			{{ csrf_field() }}
-				<button type="submit" class="btn btn-xs btn-primary">+</button>
+				<button type="submit" class="btn btn-xl" style="background:#808080;color:#ffffff">+</button>
 			</form>
-			<form method="POST" action="{{ url('/minus') }}">
+			{{ $jumlah_pengunjung->jumlah_pengunjung }}
+			<form method="POST" action="{{ url('/minus') }}" style="display: inline-block; ">
 			{{ csrf_field() }}
-				<button type="submit" class="btn btn-xs btn-primary">-</button>
+				<button type="submit" class="btn btn-xl" style="background:#808080;color:#ffffff">-</button>
 			</form>
+			</h2>
+			<h3>Total Pengunjung hari ini: {{ $jumlah_pengunjung->total_pengunjung }}</h3>
 			<form method="POST" action="{{ url('/save') }}">
 			{{ csrf_field() }}
-				<button type="submit" class="btn btn-xs btn-primary">Save</button>
+				<button type="submit" class="btn" style="width:70;height:40;background:#808080;color:#ffffff">Save</button>
 			</form>
+			</h1>
+
+			<br><br>
+
 			<table class="table table-striped table-condensed table-hover">
 				<thead>
 					<tr>

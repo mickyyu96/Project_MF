@@ -36,3 +36,6 @@ Route::post('/add_publication', ['uses' => 'MediasController@add']);
 Route::get('/edit_publication/{id_publikasi}', ['uses' => 'MediasController@showEditForm']);
 Route::post('/edit_publication', ['uses' => 'MediasController@edit']);
 Route::post('/delete_publication/{id_publikasi}', ['uses' => 'MediasController@delete']);
+
+//Messages
+Route::get('/messages',['uses'=> 'MessagesController@index']);
