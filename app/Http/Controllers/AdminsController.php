@@ -27,6 +27,7 @@ class AdminsController extends Controller
 
     	if ($user_exist) {
     		session(['state' => 'login']);
+            session(['id_admin' => $user_exist->id_admin]);
     		return redirect('/profile');
     	}
     	else {
@@ -38,6 +39,7 @@ class AdminsController extends Controller
 
     public function logout() {
     	session(['state' => 'logout']);
+        session(['id_admin' => 0]);
     	return redirect('/');
     }
 }

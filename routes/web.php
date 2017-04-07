@@ -29,3 +29,10 @@ Route::get('/customer', ['uses' => 'CustomersController@index']);
 Route::post('/add', ['uses' => 'CustomersController@add']);
 Route::post('/minus', ['uses' => 'CustomersController@minus']);
 Route::post('/save', ['uses' => 'CustomersController@save']);
+
+// Media
+Route::get('/media', ['uses' => 'MediasController@index']);
+Route::post('/add_publication', ['uses' => 'MediasController@add']);
+Route::get('/edit_publication/{id_publikasi}', ['uses' => 'MediasController@showEditForm']);
+Route::post('/edit_publication', ['uses' => 'MediasController@edit']);
+Route::post('/delete_publication/{id_publikasi}', ['uses' => 'MediasController@delete']);
