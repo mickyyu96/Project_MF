@@ -25,7 +25,7 @@
 	<h2> Location </h2>	
 	<table>
 		<tr>
-			<td rowspan="2" width = "400">Alamat: {{ $profil->alamat}}</td>
+			<td rowspan="2" width = "50%" style="padding-right: 50px;" align = "justify">{{ $profil->alamat}}</td>
 			<th>Longitude: {{ $profil->longitude }}</th>
 		</tr>
 		<tr>

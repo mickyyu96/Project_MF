@@ -44,10 +44,11 @@
             </div>
             <ul class="nav navbar-nav navbar-right">
                 @if(session('state') == 'login')
-                    <form method="POST" action="{{ url('/logout') }}">
+                    <form method="POST" id="logoutForm" action="{{ url('/logout') }}">
                     {{ csrf_field() }}
-                       <span class="glyphicon glyphicon-log-"></span><button type="submit" style="background:transparent;border;border:none;padding-top: 5px;">Logout</button>
-                    </form>
+                       <!-- <span class="glyphicon glyphicon-log-"></span><button type="submit" style="background:transparent;border;border:none;padding-top: 5px;">Logout</button> -->
+                   </form>
+                   <div onclick="javascript:document.getElementById('logoutForm').submit();"><span class="glyphicon glyphicon-log-in"></span>Logout</div>
                 @else
                     <li><a href="{{ url('/login') }}"> <span class="glyphicon glyphicon-log-in"></span>Login</a></li>
                 @endif
