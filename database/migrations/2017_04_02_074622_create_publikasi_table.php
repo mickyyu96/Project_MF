@@ -15,7 +15,6 @@ class CreatePublikasiTable extends Migration
     {
         Schema::create('publikasi', function (Blueprint $table) {
             $table->increments('id_publikasi');
-            $table->binary('image');
             $table->text('deskripsi');
             $table->unsignedInteger('id_admin');
             $table->timestamps();
