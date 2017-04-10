@@ -68,6 +68,6 @@ class MediasController extends Controller
     		->where('id_publikasi', $id_publikasi)
     		->delete();
     	File::delete("uploads/".$id_publikasi);
-    	return redirect('media');
+    	return redirect('/media');
     }
 }

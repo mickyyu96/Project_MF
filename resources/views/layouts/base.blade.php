@@ -67,7 +67,7 @@
                 <a href="{{ url('/media') }}">Media</a>
             </li>
             <li>
-                <a href="{{ url('/messages') }}">Messages</a>
+                <a href="{{ url('/message') }}">Messages</a>
             </li>
            
       </ul>

@@ -9,7 +9,7 @@ class AdminsController extends Controller
 {
     public function showLoginForm() {
     	if (session('state') == 'login') {
-            return view('/profile');
+            return redirect('/profile');
     	}
     	else {
     		return view('admins.login');
