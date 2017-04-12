@@ -17,7 +17,7 @@ Route::get('/', ['uses' => 'MainsController@index']);
 // Login/Logout
 Route::get('/login', ['uses' => 'AdminsController@showLoginForm']);
 Route::post('/login', ['uses' => 'AdminsController@login']);
-Route::post('/logout', ['uses' => 'AdminsController@logout']);
+Route::post('/logout', ['uses' => 'AdminsController@logout'])->name('logout');
 
 // Profile
 Route::get('/profile', ['uses' => 'ProfilesController@index']);

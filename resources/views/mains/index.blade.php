@@ -64,7 +64,6 @@
 			<div class="header-content-inner">
 				<h1 id="homeHeading"> Mooda Fitness </h1>
 				<hr>
-				<a href="{{ url('/profile') }}">Profile</a>
 				<p> Slogan here </p>
 			</div>
 		</div>

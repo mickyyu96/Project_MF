@@ -14,19 +14,23 @@
 		</div>
 		<div class="col-md-12" >
 
-			<h2> Jumlah Pengunjung </h2>
-			<h1 style="text-align: center;">
-			<form method="POST" action="{{ url('/add') }}" style="display: inline-block;">
-			{{ csrf_field() }}
-				<button type="submit" class="btn btn-xl" style="background:#808080;color:#ffffff">+</button>
-			</form>
-			{{ $jumlah_pengunjung->jumlah_pengunjung }}
+			<h3> Jumlah Pengunjung </h3>
+			<h1 style="text-align: left;">
+
 			<form method="POST" action="{{ url('/minus') }}" style="display: inline-block; ">
 			{{ csrf_field() }}
 				<button type="submit" class="btn btn-xl" style="background:#808080;color:#ffffff">-</button>
 			</form>
-			</h2>
-			<h3>Total Pengunjung hari ini: {{ $jumlah_pengunjung->total_pengunjung }}</h3>
+
+			{{ $jumlah_pengunjung->jumlah_pengunjung }}
+
+			<form method="POST" action="{{ url('/add') }}" style="display: inline-block;">
+			{{ csrf_field() }}
+				<button type="submit" class="btn btn-xl" style="background:#808080;color:#ffffff">+</button>
+			</form>
+
+			<h3>Total Pengunjung hari ini: <strong>{{ $jumlah_pengunjung->total_pengunjung }}</strong></h3>
+			<br>
 			<form method="POST" action="{{ url('/save') }}">
 			{{ csrf_field() }}
 				<button type="submit" class="btn" style="width:70;height:40;background:#808080;color:#ffffff">Save</button>

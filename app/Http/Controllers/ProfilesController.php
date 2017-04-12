@@ -38,9 +38,7 @@ class ProfilesController extends Controller
                 'email' => $request->email,
                 'no_telp' => $request->no_telp,
                 'instagram' => $request->instagram,
-                'alamat' => $request->alamat,
-                'longitude' => $request->longitude,
-                'latitude' => $request->latitude]);
+                'alamat' => $request->alamat]);
 
         return redirect('/profile');
     }

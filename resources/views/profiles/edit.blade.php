@@ -86,35 +86,39 @@
     <form role="form" method="POST" action="{{ url('/edit_profile') }}">
        {{ csrf_field() }}
 
-    <textarea id="deskripsi" type="text" class="form-control" name="deskripsi" required autofocus rows="5">{{ $profil->deskripsi }}</textarea>
+    <textarea id="deskripsi" type="text" class="form-control" name="deskripsi" required autofocus rows="5" style="resize: none;">{{ $profil->deskripsi }}</textarea>
     <br><br>
     <h2> Contact </h2>  
     <h4>
-        {{HTML::image('img/phone.png',"phone" ,array('class' => 'img-rounded','width' => 25, 'height' => 25))}}  <input id="no_telp" type="text"  name="no_telp" required value="{{ $profil->no_telp }}"></input>
+        {{HTML::image('img/phone.png',"phone" ,array('class' => 'img-rounded','width' => 25, 'height' => 25))}}  <input id="no_telp" type="text"  name="no_telp" required value="{{ $profil->no_telp }}" style="width:300px"></input>
     </h4>
 
     <h4>{{HTML::image('img/email.png',"email" ,array('class' => 'img-rounded','width' => 25, 'height' => 25))}}
-    <input id="email" type="email"  name="email" required value="{{ $profil->email }}"></input>
+    <input id="email" type="email"  name="email" required value="{{ $profil->email }}" style="width:300px"></input>
     </h4>
     <h4>{{HTML::image('img/Instagram.png',"instagram" ,array('class' => 'img-rounded','width' => 25, 'height' => 25))}}  
-    <input id="instagram" type="text" name="instagram" required value="{{ $profil->instagram }}"></input>
+    <input id="instagram" type="text" name="instagram" required value="{{ $profil->instagram }}" style="width:300px"></input>
     </h4>
     <br>
     <h2> Location </h2> 
     <table>
         <tr>
             <td rowspan="2" width = "70%" style="padding-right: 50px;" align = "justify">
-                 <textarea id="alamat" type="text" class="form-control" name="alamat" required autofocus rows="4"> {{ $profil->alamat }}</textarea> 
+                 <textarea id="alamat" type="text" class="form-control" name="alamat" required autofocus rows="4" style="resize: none; width:300px"> {{ $profil->alamat }}</textarea> 
             </td>
+            <!--
             <th>
               Longitude : <input id="longitude" type="string" name="longitude" required value="{{ $profil->longitude }}">
             </th>
+            -->
         </tr>
+        <!--
         <tr>
             <th>
                 Latitude : <input id="latitude" type="string" name="latitude" required value="{{ $profil->latitude }}">
             </th>
         </tr>
+        -->
     </table>
     
     <div class="col-md-8 col-md-offset-10">
